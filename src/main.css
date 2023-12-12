@@ -146,3 +146,8 @@ form button {
         flex-direction: column;
     }
 }
+@media screen and (max-width: 768px) {
+    .hero > img {
+        width: 100%;
+    }
+}
