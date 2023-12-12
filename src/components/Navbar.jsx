@@ -15,21 +15,22 @@ function Navbar({ userName }) {
                 <span>BudgetBuddy</span>
             </NavLink>
             {
-                userName &&
-                <Form
-                    method="post"
-                    action="/logout"
-                    onSubmit={(event) => {
-                        if (!confirm("Delete User and all data?")) {
-                            event.preventDefault()
-                        }
-                    }}
-                >
-                    <button type="submit">
-                        <span>Delete User</span>
-                        <TrashIcon width={20} height={20} />
-                    </button>
-                </Form>
+                userName && (
+                    <Form
+                        method="post"
+                        action="logout"
+                        onSubmit={(event) => {
+                            if (!confirm("Delete User and all data?")) {
+                                event.preventDefault()
+                            }
+                        }}
+                    >
+                        <button type="submit">
+                            <span>Delete User</span>
+                            <TrashIcon width={20} height={20} />
+                        </button>
+                    </Form>
+                )
             }
         </nav>
     )

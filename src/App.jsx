@@ -10,6 +10,9 @@ import Main, { mainLoader } from "./layouts/Main";
 import Dashboard, { dashboardLoader } from "./pages/Dashboard";
 import Error from "./pages/Error";
 
+// Actions
+import { logoutAction } from "./actions/logout";
+
 const router = createBrowserRouter([
   {
     path: "/",
