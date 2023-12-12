@@ -2,11 +2,12 @@
 import { useLoaderData } from "react-router-dom"
 
 // helper functions
-import { createBudget, fetchData, waitTime } from "../helpers"
+import { createBudget, createExpense, fetchData, waitTime } from "../helpers"
 
 // components
 import Hero from "../components/Hero"
 import AddBudgetForm from "../components/AddBudgetForm"
+import AddExpenseForm from "../components/AddExpenseForm"
 
 // react-toastify
 import { toast } from "react-toastify"
@@ -14,7 +15,7 @@ import { toast } from "react-toastify"
 // loader
 export function dashboardLoader() {
     const userName = fetchData("userName") // const userName = "John"
-    const budgets = fetchData("budgets") 
+    const budgets = fetchData("budgets")
     return { userName, budgets } // return { userName: "John" }
 }
 
@@ -26,7 +27,7 @@ export async function dashboardAction({ request }) {
     // const userName = data.get("userName")
     // const formdata = Object.fromEntries(data)
 
-    const {_action, ...values} = Object.fromEntries(data)
+    const { _action, ...values } = Object.fromEntries(data)
     if (_action === "newUser") {
         try {
             localStorage.setItem("userName", JSON.stringify(values.userName))
@@ -46,6 +47,18 @@ export async function dashboardAction({ request }) {
             throw new Error("Error creating budget!")
         }
     }
+    if (_action === "createExpense") {
+        try {
+            createExpense({
+                name: values.newExpense,
+                amount: values.newExpenseAmount,
+                budgetId: values.newExpenseBudget
+            })
+            return toast.success(`Expense ${values.newExpense} created!`)
+        } catch (e) {
+            throw new Error("Error creating expense!")
+        }
+    }
 }
 
 
@@ -57,12 +70,19 @@ function Dashboard() {
                 <div className="inner-hero">
                     <h1>Welcome, <span>{userName}</span></h1>
                     <div className="grid-sm">
-                        {/* {budgets ? () : ()} */}
-                        <div className="grid-lg">
-                            <div className="flex-lg">
-                                <AddBudgetForm />
-                            </div>
-                        </div>
+                        {
+                            budgets && budgets.length > 0 ? (
+                                <div className="inner-hero">
+                                    <AddBudgetForm />
+                                    <AddExpenseForm budgets={budgets} />
+                                </div>
+                            ) : (
+                                <div className="inner-hero">
+                                    <p>Create a budget to get started!</p>
+                                    <AddBudgetForm />
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
             ) : <Hero />}
