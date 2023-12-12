@@ -25,7 +25,7 @@ function Hero() {
                 </button>
             </Form>
         </div>
-        <img src={illustration} alt="hero" width={600} />
+        <img src={illustration} alt="hero" width={500} />
     </div>
   )
 }
