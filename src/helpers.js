@@ -1,14 +1,17 @@
+export const waitTime = () => new Promise(resolve => setTimeout(resolve, Math.random() * 5000));
+
 // Local Storage
 export const fetchData = (key) => {
     return JSON.parse(localStorage.getItem(key));
 };
 
-// create budget
+// random color generator
 const generateRandomColor = () => {
     const existingBudgetLength = fetchData('budgets')?.length ?? 0;
     return `${existingBudgetLength * 34} 65% 50%`
 }
 
+// create budget
 export const createBudget = ({name, amount}) => {
     const newItem = {
         id: crypto.randomUUID(),

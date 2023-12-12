@@ -2,7 +2,7 @@
 import { useLoaderData } from "react-router-dom"
 
 // helper functions
-import { createBudget, fetchData } from "../helpers"
+import { createBudget, fetchData, waitTime } from "../helpers"
 
 // components
 import Hero from "../components/Hero"
@@ -20,6 +20,7 @@ export function dashboardLoader() {
 
 // actions
 export async function dashboardAction({ request }) {
+    await waitTime()
     const data = await request.formData();
     // console.log({ data, request })
     // const userName = data.get("userName")
@@ -40,7 +41,7 @@ export async function dashboardAction({ request }) {
                 name: values.newBudget,
                 amount: values.newBudgetAmount
             })
-            return toast.success(`Budget ${values.userName} created!`)
+            return toast.success(`Budget ${values.newBudget} created!`)
         } catch (e) {
             throw new Error("Error creating budget!")
         }
