@@ -62,13 +62,11 @@ main {
 }
 
 .layout {
-    display: flex;
-    flex-direction: column;
-    /* display: -ms-grid; */
-    /* display: grid; */
-    /* height: 100%; */
-    /* -ms-grid-rows: auto 1fr auto; */
-    /* grid-template-rows: auto 1fr auto; */
+    display: -ms-grid;
+    display: grid;
+    height: 100vh;
+    -ms-grid-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
 }
 
 .layout>img {
@@ -146,7 +144,7 @@ form button {
 @media screen and (max-width: 1024px) {
     .hero {
         flex-direction: column;
-        margin: 10px;
+        margin: 0;
     }
 }
 @media screen and (max-width: 768px) {
