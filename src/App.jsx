@@ -3,6 +3,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+// Library imports
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 // Layouts
 import Main, { mainLoader } from "./layouts/Main";
 
@@ -42,6 +46,7 @@ function App() {
   return (
     <div>
       <RouterProvider router={router}/>
+      <ToastContainer />
     </div>
   );
 }
