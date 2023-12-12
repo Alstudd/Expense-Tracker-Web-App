@@ -8,6 +8,7 @@ import { createBudget, createExpense, fetchData, waitTime } from "../helpers"
 import Hero from "../components/Hero"
 import AddBudgetForm from "../components/AddBudgetForm"
 import AddExpenseForm from "../components/AddExpenseForm"
+import BudgetItem from "../components/BudgetItem"
 
 // react-toastify
 import { toast } from "react-toastify"
@@ -75,6 +76,16 @@ function Dashboard() {
                                 <div className="inner-hero">
                                     <AddBudgetForm />
                                     <AddExpenseForm budgets={budgets} />
+                                    <h2 className="existingBudgetsH2">Existing Budgets</h2>
+                                    <div className="budgets">
+                                        {
+                                            budgets.sort((a, b) => a.createdAt - b.createdAt).map((budget) => {
+                                                return (
+                                                    <BudgetItem key={budget.id} budget={budget} />
+                                                )
+                                            })
+                                        }
+                                    </div>
                                 </div>
                             ) : (
                                 <div className="inner-hero">

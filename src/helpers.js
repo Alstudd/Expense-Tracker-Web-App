@@ -41,3 +41,28 @@ export const createExpense = ({name, amount, budgetId}) => {
 export const deleteData = ({key}) => {
     return localStorage.removeItem(key);
 };
+
+// total spent by budget
+export const totalSpentByBudget = (budgetId) => {
+    const expenses = fetchData('expenses') ?? [];
+    const total = expenses.reduce((acc, expense) => {
+        if(expense.budgetId !== budgetId) {
+            return acc;
+        }
+        return acc += expense.amount;
+    
+    }, 0);
+    return total;
+}
+
+//  Formatting
+
+// Format percentage
+export const formatPercentage = (amount) => {
+    return amount.toLocaleString(undefined, {style: 'percent', minimumFractionDigits: 0});
+}
+
+// Format currency
+export const formatCurrency = (amount) => {
+    return amount.toLocaleString(undefined, {style: 'currency', currency: 'INR'});
+}
