@@ -62,11 +62,13 @@ main {
 }
 
 .layout {
-    display: -ms-grid;
-    display: grid;
-    min-height: 100vh;
-    -ms-grid-rows: auto 1fr auto;
-    grid-template-rows: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
+    /* display: -ms-grid; */
+    /* display: grid; */
+    /* height: 100%; */
+    /* -ms-grid-rows: auto 1fr auto; */
+    /* grid-template-rows: auto 1fr auto; */
 }
 
 .layout>img {
