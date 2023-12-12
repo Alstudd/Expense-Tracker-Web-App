@@ -200,6 +200,10 @@ button[disabled] {
 
 }
 
+.form-wrapper h2 span {
+    color: #f7ac16;
+}
+
 @media screen and (max-width: 1024px) {
     .hero {
         flex-direction: column;

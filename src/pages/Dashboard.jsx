@@ -9,6 +9,7 @@ import Hero from "../components/Hero"
 import AddBudgetForm from "../components/AddBudgetForm"
 import AddExpenseForm from "../components/AddExpenseForm"
 import BudgetItem from "../components/BudgetItem"
+import ExpensesTable from "../components/ExpensesTable"
 
 // react-toastify
 import { toast } from "react-toastify"
@@ -17,7 +18,8 @@ import { toast } from "react-toastify"
 export function dashboardLoader() {
     const userName = fetchData("userName") // const userName = "John"
     const budgets = fetchData("budgets")
-    return { userName, budgets } // return { userName: "John" }
+    const expenses = fetchData("expenses")
+    return { userName, budgets, expenses } // return { userName: "John" }
 }
 
 // actions
@@ -64,7 +66,7 @@ export async function dashboardAction({ request }) {
 
 
 function Dashboard() {
-    const { userName, budgets } = useLoaderData() // const { userName } = { userName: "John" }
+    const { userName, budgets, expenses } = useLoaderData() // const { userName } = { userName: "John" }
     return (
         <>
             {userName ? (
@@ -79,13 +81,25 @@ function Dashboard() {
                                     <h2 className="existingBudgetsH2">Existing Budgets</h2>
                                     <div className="budgets">
                                         {
-                                            budgets.sort((a, b) => a.createdAt - b.createdAt).map((budget) => {
+                                            budgets.sort((a, b) => b.createdAt - a.createdAt).map((budget) => {
                                                 return (
                                                     <BudgetItem key={budget.id} budget={budget} />
                                                 )
                                             })
                                         }
                                     </div>
+                                    {
+                                        expenses && expenses.length > 0 && (
+                                            <>
+                                                <div className="expenses">
+                                                    <h2 className="recentExpensesH2">Recent Expenses</h2>
+                                                    <ExpensesTable expenses={
+                                                        expenses.sort((a, b) => b.createdAt - a.createdAt)
+                                                    } />
+                                                </div>
+                                            </>
+                                        )
+                                    }
                                 </div>
                             ) : (
                                 <div className="inner-hero">

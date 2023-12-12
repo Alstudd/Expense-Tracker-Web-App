@@ -1,4 +1,4 @@
-export const waitTime = () => new Promise(resolve => setTimeout(resolve, Math.random() * 5000));
+export const waitTime = () => new Promise(resolve => setTimeout(resolve, Math.random() * 1000));
 
 // Local Storage
 export const fetchData = (key) => {
@@ -56,6 +56,11 @@ export const totalSpentByBudget = (budgetId) => {
 }
 
 //  Formatting
+
+// Format date
+export const formatDateToLocaleString = (timestamp) => {
+    return new Date(timestamp).toLocaleDateString();
+}
 
 // Format percentage
 export const formatPercentage = (amount) => {
