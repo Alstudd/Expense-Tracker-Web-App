@@ -127,7 +127,7 @@ form input:focus {
     border: 3px solid #f7ac16;
 }
 
-form button {
+form button, .btn {
     background-color: #f7ac16;
     border: 3px solid #f7ac16;
     border-radius: 15px;
@@ -139,6 +139,36 @@ form button {
     align-items: center;
     gap: 8px;
     width: 180px;
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.flex-md {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.inner-myForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 3px solid #f7ac16;
+    border-radius: 15px;
+    padding: 20px;
+
 }
 
 @media screen and (max-width: 1024px) {

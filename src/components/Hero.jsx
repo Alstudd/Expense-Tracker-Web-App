@@ -19,6 +19,7 @@ function Hero() {
             </p>
             <Form method="post">
                 <input type="text" name="userName" placeholder="Enter your name" aria-label="Your Name" autoComplete="given-name" required />
+                <input type="hidden" name="_action" value="newUser" />
                 <button type="submit">
                     <span>Get Started</span>
                     <UserPlusIcon width={20} height={20} />
