@@ -11,8 +11,8 @@ function Hero() {
     <div className="hero">
       <div className="inner-hero">
         <h1>
-          Track Your Expenses With <br />
-          <span>Your BudgetBuddy</span>
+          Track Your Expenses With<br />
+          <span> Financify</span>
         </h1>
         <p>
           Personal budgeting and expense tracking made simple.
