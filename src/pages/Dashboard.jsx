@@ -111,11 +111,13 @@ function Dashboard() {
                           .sort((a, b) => b.createdAt - a.createdAt)
                           .slice(0, 8)}
                       />
+                      <div className="viewAllExp">
                       {expenses.length > 0 && (
                         <Link to="expenses" className="budgetItemBtn">
                           View all expenses
                         </Link>
                       )}
+                      </div>
                     </div>
                   </>
                 )}
