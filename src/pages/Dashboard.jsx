@@ -91,8 +91,8 @@ function Dashboard() {
                                     {
                                         expenses && expenses.length > 0 && (
                                             <>
+                                                <h2 className="recentExpensesH2">Recent Expenses</h2>
                                                 <div className="expenses">
-                                                    <h2 className="recentExpensesH2">Recent Expenses</h2>
                                                     <ExpensesTable expenses={
                                                         expenses.sort((a, b) => b.createdAt - a.createdAt)
                                                     } />
