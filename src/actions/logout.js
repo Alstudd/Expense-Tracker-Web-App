@@ -8,15 +8,15 @@ import { deleteData } from "../helpers";
 import { toast } from "react-toastify";
 
 export async function logoutAction() {
-    deleteData({
-        key: "userName"
-    })
-    deleteData({
-        key: "budgets"
-    })
-    deleteData({
-        key: "expenses"
-    })
-    toast.success("Account deleted successfully!")
-    return redirect("/")
+  deleteData({
+    key: "userName",
+  });
+  deleteData({
+    key: "budgets",
+  });
+  deleteData({
+    key: "expenses",
+  });
+  toast.success("Account deleted successfully!");
+  return redirect("/");
 }
