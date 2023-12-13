@@ -79,7 +79,7 @@ export const totalSpentByBudget = (budgetId) => {
 
 // Format date
 export const formatDateToLocaleString = (timestamp) => {
-  return new Date(timestamp).toLocaleDateString();
+  return new Date(timestamp).toLocaleDateString('en-GB');
 };
 
 // Format percentage

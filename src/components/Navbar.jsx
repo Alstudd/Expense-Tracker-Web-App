@@ -12,7 +12,7 @@ function Navbar({ userName }) {
     <nav>
       <NavLink to="/" aria-label="home">
         <img src={logomark} alt="logomark" height={30} />
-        <span>BudgetBuddy</span>
+        <span>Financify</span>
       </NavLink>
       {userName && (
         <Form
