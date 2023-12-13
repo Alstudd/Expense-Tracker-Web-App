@@ -37,12 +37,11 @@ function ExpensesPage() {
   const { expenses } = useLoaderData();
   return (
     <div>
-      <h1>All Expenses</h1>
       {expenses && expenses.length > 0 ? (
         <div className="inner-hero">
-          <h2>
-            Recent Expenses<small>Total = {expenses.length}</small>
-          </h2>
+          <h1>
+            All Expenses<span className="totalExp">{" "}(Total = {expenses.length})</span>
+          </h1>
           <ExpensesTable expenses={expenses.sort((a, b) => b.createdAt - a.createdAt)} />
         </div>
       ) : (

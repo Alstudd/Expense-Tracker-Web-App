@@ -112,7 +112,7 @@ function Dashboard() {
                           .slice(0, 8)}
                       />
                       {expenses.length > 0 && (
-                        <Link to="expenses" className="btn">
+                        <Link to="expenses" className="budgetItemBtn">
                           View all expenses
                         </Link>
                       )}

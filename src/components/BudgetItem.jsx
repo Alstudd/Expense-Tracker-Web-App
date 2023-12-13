@@ -42,7 +42,7 @@ function BudgetItem({ budget, showDelete = false }) {
               }
             }}
           >
-            <button type="submit" className="btn">
+            <button type="submit" className="budgetItemBtn">
               <span>Delete Budget</span>
               <TrashIcon width={20} />
             </button>
@@ -50,10 +50,9 @@ function BudgetItem({ budget, showDelete = false }) {
         </div>
       ) : (
         <div className="flex-md">
-          <Link to={`/budget/${id}`} className="btn">
+          <Link to={`/budget/${id}`} className="budgetItemBtn">
             <span>View Details</span>
-            <BookmarkIcon width={20} />
-            {/* <BanknotesIcon width={20} /> */}
+            <BanknotesIcon width={20} />
           </Link>
         </div>
       )}
