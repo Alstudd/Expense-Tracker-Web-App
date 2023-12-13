@@ -29,7 +29,6 @@ export async function dashboardAction({ request }) {
     // console.log({ data, request })
     // const userName = data.get("userName")
     // const formdata = Object.fromEntries(data)
-
     const { _action, ...values } = Object.fromEntries(data)
     if (_action === "newUser") {
         try {
