@@ -6,7 +6,7 @@ function ExpensesTable({ expenses, showBudget = true }) {
       <table>
         <thead>
           <tr>
-            {["Name", "Amount", "Date", showBudget ? "Budget" : "", ""].map(
+            {["Name", "Amount", "Date", showBudget ? "Budget" : "", "Action"].map(
               (i, index) => {
                 return <th key={index}>{i}</th>;
               }

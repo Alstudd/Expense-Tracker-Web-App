@@ -34,7 +34,7 @@ function ExpenseItem({ expense, showBudget }) {
           </Link>
         )}
       </td>
-      <td>
+      <td className="trashRow">
         <fetcher.Form method="post">
           <input type="hidden" name="_action" value="deleteExpense" />
           <input type="hidden" name="expenseId" value={expense.id} />

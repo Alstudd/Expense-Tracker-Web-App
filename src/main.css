@@ -283,7 +283,7 @@ progress[value]::-webkit-progress-value {
   background-color: hsl(var(--accent));
   border: 3px solid hsl(var(--accent));
   border-radius: 15px;
-  padding: 15px 20px;
+  padding: 10px 5px;
   color: #fff;
   font-size: 18px;
   cursor: pointer;
@@ -342,4 +342,9 @@ table a {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.trashRow {
+  display: flex;
+  justify-content: center;
 }
