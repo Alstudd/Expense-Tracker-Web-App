@@ -215,3 +215,32 @@ button[disabled] {
     width: 100%;
   }
 }
+
+progress {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: 100%;
+    height: 16px;
+    border-radius: 100vmax;
+    overflow: hidden;
+    -webkit-transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  progress[value]::-webkit-progress-bar {
+    background-color: hsl(180 14% 85%);
+  }
+  
+  progress[value]::-moz-progress-bar {
+    -moz-transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: hsl(183 74% 44%);
+  }
+  
+  progress[value]::-webkit-progress-value {
+    background-color: hsl(183 74% 44%);
+    -webkit-transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }

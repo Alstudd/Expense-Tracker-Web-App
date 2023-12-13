@@ -23,7 +23,7 @@ export async function budgetLoader({ params }) {
     category: "expenses",
     key: "budgetId",
     value: params.id,
-  })[0];
+  });
   if (!budget) {
     throw new Error("The budget does not exist!");
   }

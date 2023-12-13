@@ -2,9 +2,6 @@
 import { Link } from "react-router-dom";
 import { Form, useFetcher } from "react-router-dom";
 
-// react imports
-import { useEffect, useRef } from "react";
-
 // helper functions
 import {
   formatCurrency,
@@ -16,18 +13,6 @@ import { TrashIcon } from "@heroicons/react/24/solid";
 
 function ExpenseItem({ expense, showBudget }) {
   const fetcher = useFetcher();
-  const isSubmitting = fetcher.state === "submitting";
-
-  const formRef = useRef();
-  const focusRef = useRef();
-  useEffect(() => {
-    if (!isSubmitting) {
-      // clear form
-      formRef.current.reset();
-      // reset focus
-      focusRef.current.focus();
-    }
-  }, [isSubmitting]);
 
   const budget = getAllMatchingItems({
     category: "budgets",

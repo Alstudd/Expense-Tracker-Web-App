@@ -69,9 +69,7 @@ export const createExpense = ({ name, amount, budgetId }) => {
 export const totalSpentByBudget = (budgetId) => {
   const expenses = fetchData("expenses") ?? [];
   const total = expenses.reduce((acc, expense) => {
-    if (expense.budgetId !== budgetId) {
-      return acc;
-    }
+    if (expense.budgetId !== budgetId) return acc;
     return (acc += expense.amount);
   }, 0);
   return total;

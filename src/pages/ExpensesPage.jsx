@@ -11,7 +11,7 @@ import ExpensesTable from "../components/ExpensesTable";
 import { toast } from "react-toastify";
 
 // loader
-export async function expensesLoader() {
+export function expensesLoader() {
   const expenses = fetchData("expenses");
   return { expenses };
 }
@@ -26,7 +26,7 @@ export async function expensesAction({ request }) {
         key: "expenses",
         id: values.expenseId,
       });
-      return toast.success(`Expense deleted!`);
+      return toast.success("Expense deleted!");
     } catch (e) {
       throw new Error("Error deleting budget!");
     }
@@ -34,7 +34,7 @@ export async function expensesAction({ request }) {
 }
 
 function ExpensesPage() {
-  const { expenses } = useLoaderData;
+  const { expenses } = useLoaderData();
   return (
     <div>
       <h1>All Expenses</h1>
@@ -43,7 +43,7 @@ function ExpensesPage() {
           <h2>
             Recent Expenses<small>Total = {expenses.length}</small>
           </h2>
-          <ExpensesTable expenses={expenses} />
+          <ExpensesTable expenses={expenses.sort((a, b) => b.createdAt - a.createdAt)} />
         </div>
       ) : (
         <p>No expenses to show</p>
