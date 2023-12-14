@@ -22,7 +22,7 @@ function AddBudgetForm() {
 
   return (
     <div className="form-wrapper">
-      <h2>Create budget</h2>
+      <h2 className="head2">Create budget</h2>
       <fetcher.Form method="post" className="myForm" ref={formRef}>
         <div className="inner-myForm">
           <label htmlFor="newBudget">Budget Name</label>
@@ -59,7 +59,7 @@ function AddBudgetForm() {
         <input type="hidden" name="_action" value="createBudget" />
         <button
           type="submit"
-          className="btn"
+          className="btn bg-[#00b386]"
           style={{ width: "140px" }}
           disabled={isSubmitting}
         >

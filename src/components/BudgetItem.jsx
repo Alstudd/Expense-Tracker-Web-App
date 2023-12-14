@@ -21,7 +21,7 @@ function BudgetItem({ budget, showDelete = false }) {
   return (
     <div className="budget" style={{ "--accent": color }}>
       <div className="progress-text">
-        <h3>{name}</h3>
+        <h2 className="extraHead">{name}</h2>
         <p>{formatCurrency(amount)}</p>
       </div>
       <progress max={amount} value={spent}>
@@ -42,7 +42,7 @@ function BudgetItem({ budget, showDelete = false }) {
               }
             }}
           >
-            <button type="submit" className="budgetItemBtn">
+            <button type="submit" className="budgetItemBtn bg-[hsl(var(--accent))]">
               <span>Delete Budget</span>
               <TrashIcon width={20} />
             </button>

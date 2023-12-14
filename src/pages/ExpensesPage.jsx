@@ -1,3 +1,5 @@
+import "../main.css";
+
 // react-router-dom imports
 import { useLoaderData } from "react-router-dom";
 
@@ -38,9 +40,9 @@ function ExpensesPage() {
   return (
     <div>
       {expenses && expenses.length > 0 ? (
-        <div className="inner-hero">
+        <div className="inner-hero mx-[20px] my-[10px]">
           <h1>
-            All Expenses<span className="totalExp">{" "}(Total = {expenses.length})</span>
+            All Expenses<span className="totalExp"><br/>(Total = {expenses.length})</span>
           </h1>
           <ExpensesTable expenses={expenses.sort((a, b) => b.createdAt - a.createdAt)} />
         </div>

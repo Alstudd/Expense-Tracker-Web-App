@@ -1,3 +1,6 @@
+import "../main.css";
+
+// react-router-dom imports
 import { useRouteError, Link, useNavigate } from "react-router-dom";
 
 // library imports
@@ -8,7 +11,7 @@ function Error() {
   const navigate = useNavigate();
   return (
     <div className="error">
-      <h1>Sorry! We've encountered a problem!</h1>
+      <h1 className="text-2xl font-bold">Sorry! We've encountered a problem!</h1>
       <p>{error.message || error.statusText}</p>
       <div className="flex-md">
         <button className="btn" onClick={() => navigate(-1)}>

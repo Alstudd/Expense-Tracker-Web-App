@@ -11,8 +11,8 @@ function Navbar({ userName }) {
   return (
     <nav>
       <NavLink to="/" aria-label="home">
-        <img src={logomark} alt="logomark" height={30} />
-        <span>Financify</span>
+        <img src={logomark} alt="logomark" width={45} />
+        <span className="text-3xl">Financify</span>
       </NavLink>
       {userName && (
         <Form
@@ -24,7 +24,7 @@ function Navbar({ userName }) {
             }
           }}
         >
-          <button type="submit">
+          <button type="submit" className="bg-[#00b386]">
             <span>Delete User</span>
             <TrashIcon width={20} height={20} />
           </button>

@@ -11,7 +11,10 @@
 }
 
 :root {
-  --accent: 40, 93%, 53%; /* #f7ac16 */
+  /* --accent: 40, 93%, 53%;  */
+  /* #f7ac16 */
+  --accent: 165, 100%, 35%; 
+  /* #00b386 */
 }
 
 a {
@@ -43,14 +46,14 @@ nav a:hover {
   border-radius: 15px;
 }
 
-nav button:hover {
+nav button:hover, .navBtn:hover {
   background-color: rgb(248, 71, 71);
   border: 3px solid rgb(248, 71, 71);
 }
 
-main {
-  margin: 40px;
-}
+/* main {
+  margin: 0 60px 10px 60px;
+} */
 
 .layout {
   display: -ms-grid;
@@ -74,6 +77,10 @@ h6 {
   line-height: 1.3;
 }
 
+.head2 {
+  font-size: 25px;
+}
+
 .hero {
   margin: 0 50px;
   display: flex;
@@ -84,7 +91,7 @@ h6 {
 .inner-hero {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   justify-content: flex-start;
 }
 
@@ -190,7 +197,13 @@ button[disabled] {
   gap: 20px; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  gap: 30px;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
 .budget {
@@ -219,6 +232,9 @@ button[disabled] {
   }
   .budgets {
     grid-template-columns: 1fr 1fr;
+  }
+  .dashboard {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -264,6 +280,10 @@ progress[value]::-webkit-progress-value {
   -webkit-transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.extraBtn {
+  background-color: hsl(var(--accent))
+}
+
 .budgetItemBtn {
   background-color: hsl(var(--accent));
   border: 3px solid hsl(var(--accent));
@@ -283,7 +303,7 @@ progress[value]::-webkit-progress-value {
   background-color: hsl(var(--accent));
   border: 3px solid hsl(var(--accent));
   border-radius: 15px;
-  padding: 10px 5px;
+  padding: 5px 5px;
   color: #fff;
   font-size: 18px;
   cursor: pointer;
@@ -306,10 +326,13 @@ tr:nth-child(odd) {
   background-color: hsl(var(--accent) / 0.04);
 }
 
-td {
+/* td {
   border: none;
   font-size: 20px;
 }
+th {
+  font-size: 22px;
+} */
 
 thead > tr:nth-child(odd) {
   background-color: hsl(var(--accent));
@@ -318,7 +341,7 @@ thead > tr:nth-child(odd) {
 td,
 th {
   text-align: center;
-  padding: 8px;
+  padding: 10px;
 }
 
 table .btn {
@@ -347,4 +370,8 @@ table a {
 .trashRow {
   display: flex;
   justify-content: center;
+}
+
+.extraHead {
+  font-size: 20px;
 }

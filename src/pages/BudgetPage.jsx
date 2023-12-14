@@ -1,3 +1,5 @@
+import "../main.css";
+
 // react-router-dom imports
 import { useLoaderData } from "react-router-dom";
 
@@ -62,7 +64,7 @@ export async function budgetAction({ request }) {
 function BudgetPage() {
   const { budget, expenses } = useLoaderData();
   return (
-    <div className="inner-hero" style={{ "--accent": budget.color }}>
+    <div className="inner-hero mx-[20px] my-[10px]" style={{ "--accent": budget.color }}>
       <h1>
         <span>{budget.name}</span> Overview
       </h1>

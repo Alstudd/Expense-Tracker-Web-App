@@ -24,7 +24,7 @@ function AddExpenseForm({ budgets }) {
 
   return (
     <div className="form-wrapper">
-      <h2>
+      <h2 className="head2">
         Add New{" "}
         <span>{budgets.length === 1 && `${budgets.map((b) => b.name)}`}</span>{" "}
         Expense
@@ -70,7 +70,7 @@ function AddExpenseForm({ budgets }) {
         <input type="hidden" name="_action" value="createExpense" />
         <button
           type="submit"
-          className="btn"
+          className="btn bg-[#00b386] border-[#00b386]"
           style={{ width: "140px" }}
           disabled={isSubmitting}
         >

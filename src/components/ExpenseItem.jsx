@@ -40,7 +40,7 @@ function ExpenseItem({ expense, showBudget }) {
           <input type="hidden" name="expenseId" value={expense.id} />
           <button
             type="submit"
-            className="trashBtn"
+            className="trashBtn  bg-[hsl(var(--accent))]"
             aria-label={`Delete ${expense.name} expense`}
           >
             <TrashIcon width={20} height={20} />

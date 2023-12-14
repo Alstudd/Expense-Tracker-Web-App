@@ -1,3 +1,5 @@
+import "../main.css";
+
 // react-router-dom imports
 import { Link, useLoaderData } from "react-router-dom";
 
@@ -83,7 +85,7 @@ export async function dashboardAction({ request }) {
 function Dashboard() {
   const { userName, budgets, expenses } = useLoaderData(); // const { userName } = { userName: "John" }
   return (
-    <>
+    <div className="mx-[20px] my-[10px]">
       {userName ? (
         <div className="inner-hero">
           <h1>
@@ -92,9 +94,11 @@ function Dashboard() {
           <div className="grid-sm">
             {budgets && budgets.length > 0 ? (
               <div className="inner-hero">
+                <div className="dashboard">
                 <AddBudgetForm />
                 <AddExpenseForm budgets={budgets} />
-                <h2 className="existingBudgetsH2">Existing Budgets</h2>
+                </div>
+                <h2 className="head2">Existing Budgets</h2>
                 <div className="budgets">
                   {budgets
                     .sort((a, b) => b.createdAt - a.createdAt)
@@ -104,7 +108,7 @@ function Dashboard() {
                 </div>
                 {expenses && expenses.length > 0 && (
                   <>
-                    <h2 className="recentExpensesH2">Recent Expenses</h2>
+                    <h2 className="head2">Recent Expenses</h2>
                     <div className="expenses">
                       <ExpensesTable
                         expenses={expenses
@@ -113,7 +117,7 @@ function Dashboard() {
                       />
                       <div className="viewAllExp">
                       {expenses.length > 0 && (
-                        <Link to="expenses" className="budgetItemBtn">
+                        <Link to="/expenses" className="budgetItemBtn">
                           View all expenses
                         </Link>
                       )}
@@ -133,7 +137,7 @@ function Dashboard() {
       ) : (
         <Hero />
       )}
-    </>
+    </div>
   );
 }
 

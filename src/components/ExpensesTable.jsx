@@ -2,8 +2,8 @@ import ExpenseItem from "./ExpenseItem";
 
 function ExpensesTable({ expenses, showBudget = true }) {
   return (
-    <div className="table">
-      <table>
+    <div className="overflow-x-auto">
+      <table className="myTable">
         <thead>
           <tr>
             {["Name", "Amount", "Date", showBudget ? "Budget" : "", "Action"].map(

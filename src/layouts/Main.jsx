@@ -9,6 +9,7 @@ import wave from "../assets/wave.svg";
 
 // components
 import Navbar from "../components/Navbar";
+import Nav from "../components/Nav";
 
 // loader functions
 export function mainLoader() {
@@ -19,8 +20,9 @@ export function mainLoader() {
 function Main() {
   const { userName } = useLoaderData(); // const { userName } = { userName: "John" }
   return (
-    <div className="layout">
-      <Navbar userName={userName} />
+    <div className="flex flex-col justify-between min-h-[100vh]">
+      {/* <Navbar userName={userName} /> */}
+      <Nav userName={userName}/>
       <main>
         <Outlet />
       </main>
