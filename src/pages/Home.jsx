@@ -5,12 +5,12 @@ import HeroSection from "../components/Home/HeroSection";
 import Carousel from "../components/Home/Carousel";
 import Slider from "../components/Home/Slider";
 import OurServices from "../components/Home/OurServices";
-import carouselPic1 from "../assets/Home/carouselPic1.png";
-import carouselPic2 from "../assets/Home/carouselPic2.png";
-import carouselPic3 from "../assets/Home/pic2.png";
-import carouselPic4 from "../assets/Home/pic3.png";
-import carouselPic5 from "../assets/Home/pic5.png";
-import carouselPic6 from "../assets/Home/pic6.png";
+import carouselPic1 from "../assets/Home/image1.jpeg";
+import carouselPic2 from "../assets/Home/image2.jpeg";
+import carouselPic3 from "../assets/Home/image3.jpeg";
+import carouselPic4 from "../assets/Home/image4.jpeg";
+import carouselPic5 from "../assets/Home/image5.jpeg";
+import carouselPic6 from "../assets/Home/image6.jpeg";
 import "../css/contact.css";
 import Footer from "../components/Footer";
 
