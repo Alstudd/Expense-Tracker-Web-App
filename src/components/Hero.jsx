@@ -8,7 +8,7 @@ import mainImg from "../assets/Home/main-img.svg";
 
 function Hero() {
   return (
-    <div className="hero mt-6 mx-[60px]">
+    <div className="hero">
       <div className="inner-hero">
         <h1>
           Track Your Expenses With<br />

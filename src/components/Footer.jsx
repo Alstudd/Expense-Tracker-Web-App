@@ -28,7 +28,7 @@ const Footer = () => {
                     <p className="py-4">The latest news, articles and resources sent to your inbox weekly.</p>
                     <form className="flex flex-col sm:flex-row">
                         <input className="w-full p-2 mr-4 rounded-md mb-2 border-2 border-black" type="email" placeholder="Enter email" />
-                        <button className="p-3 mb-2 bg-[#00b386] text-white rounded-md" type="submit">Subscribe</button>
+                        <button className="p-3 mb-2 bg-[#00b386] text-white rounded-md text-center" type="submit">Subscribe</button>
                     </form>
                 </div>
             </div>
