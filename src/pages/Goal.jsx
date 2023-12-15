@@ -25,8 +25,8 @@ const Goal = () => {
   return (
     <div>
       <div className="bg-[#00B386]">
-        <div className="md:w-[90%] mx-auto">
-          <h1 className="md:block hidden p-2 m-3 text-2xl font-bold">Welcome Username</h1>
+        <div className="md:w-[90%] pt-2 mx-auto">
+          <h1 className="md:block hidden p-2 m-3 text-2xl font-bold">Welcome</h1>
           <div className="md:hidden">
             <div className="rounded-full flex flex-row gap-3 px-5 p-3 m-3 bg-transparent text-black border-2 border-black">
               <CircleUser/>

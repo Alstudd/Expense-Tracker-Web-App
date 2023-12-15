@@ -85,7 +85,7 @@ export async function dashboardAction({ request }) {
 function Dashboard() {
   const { userName, budgets, expenses } = useLoaderData(); // const { userName } = { userName: "John" }
   return (
-    <div className="mx-[20px] my-[10px]">
+    <div className="mx-[60px] my-[10px]">
       {userName ? (
         <div className="inner-hero">
           <h1>
