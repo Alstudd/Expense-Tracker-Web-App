@@ -228,7 +228,6 @@ button[disabled] {
 @media screen and (max-width: 1024px) {
   .hero {
     flex-direction: column;
-    margin: 0;
   }
   .budgets {
     grid-template-columns: 1fr 1fr;
