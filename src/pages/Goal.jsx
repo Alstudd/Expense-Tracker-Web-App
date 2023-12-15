@@ -30,7 +30,7 @@ const Goal = () => {
           <div className="md:hidden">
             <div className="rounded-full flex flex-row gap-3 px-5 p-3 m-3 bg-transparent text-black border-2 border-black">
               <CircleUser/>
-              Welcome Username
+              Welcome To Financial Planner
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-3">
