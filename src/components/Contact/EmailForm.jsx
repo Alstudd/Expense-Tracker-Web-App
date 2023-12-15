@@ -2,7 +2,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import { FaSmile } from "react-icons/fa"
 
 function ContactForm() {
-    const [state, handleSubmit] = useForm("xbjvzapr");
+    const [state, handleSubmit] = useForm("mwkgeegl");
     if (state.succeeded) {
         return <div className="info-box flex flex-col justify-center items-center">
             <FaSmile className='text-[#00b386] text-4xl' />
